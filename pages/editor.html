@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактор - Simple To-Do-List</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/editor.css">
+</head>
+<body>
+<header>
+    <h1 class="header__title">
+        <a href="index.html" class="header__link">Simple To-Do-List</a>
+    </h1>
+    <nav class="header__nav">
+        <a href="tasks.html" class="nav__link">Задачи</a>
+        <a href="editor.html" class="nav__link">Редактор</a>
+        <a href="about.html" class="nav__link">Обо мне</a>
+    </nav>
+</header>
+<main>
+    <h2 class="title">Редактор задач</h2>
+    <div>
+        <label for="task-name" class="label">Описание задачи:</label>
+        <input type="text" id="task-name" class="input-text">
+    </div>
+    <div>
+        <label for="task-drop-list" class="label">Редактируемая задача:</label>
+        <select id="task-drop-list" class="drop-list"></select>
+    </div>
+    <div class="editor">
+        <button id="editor__add-task" class="editor__button">Добавить задачу</button>
+        <button id="editor__edit-task" class="editor__button">Изменить задачу</button>
+        <button id="editor__delete-task" class="editor__button">Удалить задачу</button>
+    </div>
+</main>
+<footer>
+    <p class="footer__text">&copy; 2024 Simple To-Do-List. Все права защищены.</p>
+</footer>
+<script src="../static/js/editor.js"></script>
+</body>
+</html>

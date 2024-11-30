@@ -1,0 +1,55 @@
+.label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: #00E034;
+}
+
+.input-text, .drop-list {
+    font-size: 16px;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.placeholder-font-style {
+    font-style: italic;
+}
+
+.editor {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    column-gap: 10px;
+}
+
+.editor__button {
+    max-width: 190px;
+    flex: 1;
+    background-color: #76DB67;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.editor__button:hover {
+    background-color: #67DB82;
+}
+
+@media (max-width: 620px) {
+    .editor {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+    }
+    .editor__button {
+        max-width: 400px;
+        width: 100%;
+    }
+}

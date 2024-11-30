@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи - Simple To-Do-List</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/tasks.css">
+</head>
+<body>
+<header>
+    <h1 class="header__title">
+        <a href="index.html" class="header__link">Simple To-Do-List</a>
+    </h1>
+    <nav class="header__nav">
+        <a href="tasks.html" class="nav__link">Задачи</a>
+        <a href="editor.html" class="nav__link">Редактор</a>
+        <a href="about.html" class="nav__link">Обо мне</a>
+    </nav>
+</header>
+<main>
+    <h2 class="title">Задачи</h2>
+    <div>
+        <h3 class="subtitle">Выполняемые</h3>
+        <ul id="todo-list"></ul>
+    </div>
+    <div>
+        <h3 class="subtitle">Выполненные</h3>
+        <ul id="done-list"></ul>
+    </div>
+</main>
+<footer>
+    <p class="footer__text">&copy; 2024 Simple To-Do-List. Все права защищены.</p>
+</footer>
+<script src="../static/js/tasks.js"></script>
+</body>
+</html>
