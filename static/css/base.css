@@ -111,6 +111,12 @@ footer {
 }
 
 .footer__text {
-    margin: 0;
+    margin: 0 2px;
     font-size: 14px;
+}
+
+@media (max-width: 550px) {
+    #load-time {
+        display: none;
+    }
 }

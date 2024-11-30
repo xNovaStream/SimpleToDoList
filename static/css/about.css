@@ -42,3 +42,12 @@
     color: #555;
     text-align: left;
 }
+
+@media (max-width: 450px) {
+    .about__ascii-picture {
+        grid-column: auto;
+    }
+    .about {
+        grid-template-columns: auto
+    }
+}
