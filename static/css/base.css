@@ -55,6 +55,13 @@ header {
     transition: background-color 0.3s;
 }
 
+.nav__link__active {
+    background-color: #67DB82;
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+}
+
 @media (min-width: 1000px) {
     .header__nav {
         justify-content: space-evenly;
