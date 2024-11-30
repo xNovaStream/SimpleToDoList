@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
             message.textContent = 'Нет выполняемых задач.';
             todoList.appendChild(message);
         } else {
-            todoTasks.forEach((task, index) => {
+            todoTasks.forEach(task => {
                 const li = document.createElement('li');
                 li.textContent = task.text;
                 todoList.appendChild(li);
 
                 li.addEventListener('click', () => {
-                    tasks[index].done = true;
+                    task.done = true;
                     saveTasks();
                     renderTasks();
                 });
@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
             message.textContent = 'Нет выполненных задач.';
             doneList.appendChild(message);
         } else {
-            doneTasks.forEach((task, index) => {
+            doneTasks.forEach(task => {
                 const li = document.createElement('li');
                 li.textContent = task.text;
                 doneList.appendChild(li);
 
                 li.addEventListener('click', () => {
-                    tasks[index].done = false;
+                    task.done = false;
                     saveTasks();
                     renderTasks();
                 });

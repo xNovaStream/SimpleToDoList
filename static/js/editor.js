@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const text = taskInput?.value.trim();
             if (text) {
                 tasks.push({ text, done: false });
-                taskInput.value = ''; // Очистить поле ввода
+                taskInput.value = '';
                 saveTasks();
                 renderTaskSelector();
             } else {
