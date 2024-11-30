@@ -32,10 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
             message.textContent = 'Нет выполненных задач.';
             doneList.appendChild(message);
         } else {
-            doneTasks.forEach(task => {
+            doneTasks.forEach((task, index) => {
                 const li = document.createElement('li');
                 li.textContent = task.text;
                 doneList.appendChild(li);
+
+                li.addEventListener('click', () => {
+                    tasks[index].done = false;
+                    saveTasks();
+                    renderTasks();
+                });
             });
         }
     };
