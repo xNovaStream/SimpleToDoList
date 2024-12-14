@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
-        document.dispatchEvent(new Event('fetchTasksLoaded'));
+        doActionsAfterEnd();
         alert('Ошибка при загрузке задач:');
         return;
     }
