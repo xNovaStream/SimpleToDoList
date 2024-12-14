@@ -24,3 +24,8 @@
     text-decoration: line-through;
     color: #888;
 }
+
+#preloader {
+    text-align: center;
+    margin: 20px 0;
+}

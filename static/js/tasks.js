@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('fetchTasksLoaded', () => {
     const todoList = document.getElementById('todo-list');
     const doneList = document.getElementById('done-list');
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
