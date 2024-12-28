@@ -33,6 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     };
 
+    const showAlert = (title, text, icon) => {
+        Swal.fire({
+            title,
+            text,
+            icon,
+            customClass: {
+                confirmButton: 'swal-button',
+                popup: 'swal-popup',
+                title: 'swal-title',
+                content: 'swal-content',
+            },
+            buttonsStyling: false,
+        });
+    };
+
     if (addTaskButton) {
         addTaskButton.addEventListener('click', () => {
             const text = taskInput?.value.trim();
@@ -41,8 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 taskInput.value = '';
                 saveTasks();
                 renderTaskSelector();
+                showAlert('Успех!', 'Задача добавлена.', 'success');
             } else {
-                alert("Введите текст задачи.");
+                showAlert('Ошибка', 'Введите текст задачи.', 'error');
             }
         });
     }
@@ -50,12 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (deleteTaskButton) {
         deleteTaskButton.addEventListener('click', () => {
             const index = taskSelector?.value;
-            if (index !== null && index !== "") {
+            if (tasks.length !== 0 && index !== null && index !== "") {
                 tasks.splice(index, 1);
                 saveTasks();
                 renderTaskSelector();
+                showAlert('Успех!', 'Задача удалена.', 'success');
             } else {
-                alert("Выберите задачу для удаления.");
+                showAlert('Ошибка', 'Выберите задачу для удаления.', 'error');
             }
         });
     }
@@ -69,8 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 taskInput.value = '';
                 saveTasks();
                 renderTaskSelector();
+                showAlert('Успех!', 'Задача изменена.', 'success');
             } else {
-                alert("Выберите задачу и введите новый текст.");
+                showAlert('Ошибка', 'Выберите задачу и введите новый текст.', 'error');
             }
         });
     }

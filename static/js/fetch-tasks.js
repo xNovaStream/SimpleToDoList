@@ -13,13 +13,28 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
+    const showAlert = (title, text, icon) => {
+        Swal.fire({
+            title,
+            text,
+            icon,
+            customClass: {
+                confirmButton: 'swal-button',
+                popup: 'swal-popup',
+                title: 'swal-title',
+                content: 'swal-content',
+            },
+            buttonsStyling: false,
+        });
+    };
+
     const apiUrl = 'https://dummyjson.com/todos/random/10';
 
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
         doActionsAfterEnd();
-        alert('Ошибка при загрузке задач:');
+        showAlert('Ошибка', 'Не удалось загрузить задачи', 'error');
         return;
     }
 
